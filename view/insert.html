@@ -196,8 +196,10 @@
 
             <div class="form-floating ">
                 <div class="input-group">
-                    <input type="number" class="form-control" id="captcha" name="captcha" placeholder="Captcha">
-                    <span class="input-group-text" id="basic-addon2">1234</span>
+                    <input type="text" class="form-control" id="captcha" name="captcha" placeholder="Captcha" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);">
+                    <span class="input-group-text" id="basic-addon2">
+                        <img src="<?php echo $captcha_url ?>" alt="capcha"/>
+                    </span>
                 </div>
             </div>
 
